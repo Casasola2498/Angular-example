@@ -1,0 +1,13 @@
+<div class="main-container">
+    <div class="hero">
+        <h1>Automotive<br/>Photography</h1>
+    </div>
+    <p class="intro">Even if you photograph cars for hobby or you are a professional photographer, you'll always be looking to take the perfect shot of that car. Not every situation is going to be the same when you're looking for it, there's a lot of things that can affect how your photos would be. Weather, time, illumination, location, and model of the automotive are some factors that play a big role in how good your photos are.</p>
+    <p class="intro">Here we are going to explain some factors and secrets that can help you obtain the perfect photographs that you've always wanted to take.</p>
+    <app-factor *ngFor="let factor of photoFactors"
+        [factor]="factor.factor" 
+        [bodyText]="factor.bodyText" 
+        [image]="factor.image"
+    ></app-factor>
+    <p class="footer-text">All photos used in this app were taken by Jose Daniel Gomez Casasola, creator of the web app.</p>
+</div>

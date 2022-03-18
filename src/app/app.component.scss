@@ -1,0 +1,32 @@
+@use "variables";
+
+.page-container {
+    width: 100vw;
+    height: 100%;
+
+    .header {
+        width: 100vw;
+    }
+
+    .toolbar {
+        background: variables.$light-blue;
+        color: white;
+
+        button {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            color: variables.$dark-blue;
+            border-radius: 5px;
+
+            &:hover, &:focus {
+                outline: 2px solid variables.$dark-blue;
+            }
+        }
+
+        .logo {
+            height: 60%;
+            margin-left: 5px;
+        }
+    }
+}
