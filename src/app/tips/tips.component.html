@@ -1,0 +1,23 @@
+<div class="tips-container">
+    <h1>Your Photography Tips</h1>
+    <div class="tips-form">
+        <form #myForm="ngForm" (ngSubmit)="saveTip(myForm.value)">
+            <p>
+                <label>Factor: </label>
+                <select name="factorType" id="factorType" [(ngModel)]="newTip.factorType" required>
+                    <option value="Illumination">Illumination</option>
+                    <option value="Perspective">Perspective</option>
+                    <option value="Environment">Environment</option>
+                    <option value="Details">Details</option>
+                    <option value="RAW">RAW</option>
+                  </select>
+            </p>
+            <p>
+                <label>Tip: </label>
+                <textarea type="text" [(ngModel)]="newTip.tip" name="tip" required></textarea>
+            </p>
+            <button class="submit-button" type="submit" [disabled]="!myForm.valid">Add tip</button>
+        </form>
+    </div>
+    <app-personal-tip *ngFor="let tip of tips" [factor]="tip.factorType" [tip]="tip.tip"></app-personal-tip>
+</div>
