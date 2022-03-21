@@ -1,4 +1,4 @@
 export interface Tip {
     factorType: string;
-    tip: string
+    tip: string;
 }

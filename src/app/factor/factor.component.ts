@@ -9,6 +9,7 @@ export class FactorComponent implements OnInit {
   @Input() factor = '';
   @Input() bodyText = '';
   @Input() image = '';
+  @Input() imageAlt = '';
 
   constructor() { }
 
